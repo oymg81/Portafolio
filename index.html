@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oscar Mochizaki | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="title">Oscar Mochizaki</h1>
+    <p id="subtitle">Software Developer | Computer Science Student</p>
+    <button onclick="switchLanguage()">Español</button>
+  </header>
+  <main>
+    <section>
+      <h2 id="aboutTitle">About Me</h2>
+      <p id="aboutText">I am a Computer Science student at FIU, passionate about web development, AI, and building useful solutions.</p>
+    </section>
+    <section>
+      <h2 id="projectsTitle">Projects</h2>
+      <ul id="projectList">
+        <li><strong>Node.js Server:</strong> Basic API with Node and HTML.</li>
+        <li><strong>React App:</strong> Practice project using Create React App.</li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="contactTitle">Contact</h2>
+      <p>Email: oscar@example.com</p>
+      <p>GitHub: <a href="https://github.com/oscarmg81" target="_blank">oscarmg81</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Oscar Mochizaki</p>
+  </footer>
+
+  <script>
+    let isEnglish = true;
+    function switchLanguage() {
+      if (isEnglish) {
+        document.getElementById("subtitle").innerText = "Desarrollador de Software | Estudiante de Ciencias de la Computación";
+        document.getElementById("aboutTitle").innerText = "Sobre mí";
+        document.getElementById("aboutText").innerText = "Soy estudiante de Computer Science en FIU, apasionado por el desarrollo web, la inteligencia artificial y la creación de soluciones útiles.";
+        document.getElementById("projectsTitle").innerText = "Proyectos";
+        document.getElementById("projectList").innerHTML = `
+          <li><strong>Servidor Node.js:</strong> API básica con Node y HTML.</li>
+          <li><strong>React App:</strong> Proyecto de prueba con Create React App.</li>
+        `;
+        document.getElementById("contactTitle").innerText = "Contacto";
+        event.target.innerText = "English";
+      } else {
+        document.getElementById("subtitle").innerText = "Software Developer | Computer Science Student";
+        document.getElementById("aboutTitle").innerText = "About Me";
+        document.getElementById("aboutText").innerText = "I am a Computer Science student at FIU, passionate about web development, AI, and building useful solutions.";
+        document.getElementById("projectsTitle").innerText = "Projects";
+        document.getElementById("projectList").innerHTML = `
+          <li><strong>Node.js Server:</strong> Basic API with Node and HTML.</li>
+          <li><strong>React App:</strong> Practice project using Create React App.</li>
+        `;
+        document.getElementById("contactTitle").innerText = "Contact";
+        event.target.innerText = "Español";
+      }
+      isEnglish = !isEnglish;
+    }
+  </script>
+</body>
+</html>
